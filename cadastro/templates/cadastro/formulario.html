@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro de ONG - Instituto Caramelo</title>
+    </head>
+    <body>
+        <h1>Formulário de Inscrição para ONGs</h1>
+        <p>Preencha os dados abaixo para solicitar o selo do Instituti Caramelo.</p>
+
+        <form method="post">
+            {% csrf_token %} {{ form.as_p}} <button type="submit">Enviar Cadastro</button>
+        </form>
+    </body>
+</html>
