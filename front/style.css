@@ -1,0 +1,170 @@
+:root {
+    --amarelo-principal: #FBC638; /* Amarelo/Mostarda do fundo */
+    --preto-texto: #333333;
+    --branco-fundo: #FFFFFF;
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-principal);
+    color: var(--preto-texto);
+    background-color: var(--branco-fundo);
+    line-height: 1.6;
+}
+
+/* 1. ESTRUTURA DO TOPO (BARRA AMARELA COM CONTEÚDO POR CIMA) */
+.top-bar-wrapper {
+    width: 100%;
+    /* Aplica o fundo AMARELO diretamente */
+    background-color: var(--amarelo-principal); 
+    box-shadow: none; 
+    /* Padding vertical para centralizar o conteúdo do cabeçalho */
+    padding: 10px 0; 
+}
+
+/* 2. CABEÇALHO (LOGO E MENU) */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1900px;
+    margin: 0 auto;
+    
+    /* Padding horizontal */
+    padding: 0 50px; 
+    background-color: transparent; /* Fundo TRANSPARENTE para mostrar o amarelo */
+}
+
+.logo {
+    /* Ocupa o espaço necessário para a imagem */
+}
+
+/* ESTILO PARA O LOGO (IMAGEM) */
+.logo img {
+    height: 90px; /* Define o tamanho da imagem para caber na barra */
+    width: auto;
+    display: block; 
+}
+
+.menu-principal ul {
+    list-style: none;
+    display: flex;
+}
+
+/* Ajuste no Menu: Cor BRANCA para contraste na barra amarela */
+.menu-principal li a {
+    text-decoration: none;
+    color: var(--branco-fundo); /* Links BRANCOS */
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.menu-principal li a:hover {
+    color: var(--preto-texto); 
+}
+
+/* ---------------------------------------------------- */
+
+/* 3. SEÇÃO DE CADASTRO (FORMULÁRIO) */
+
+.cadastro-ong {
+    background-color: var(--branco-fundo); 
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.formulario-container {
+    background-color: var(--amarelo-principal);
+    width: 600px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-container h2 {
+    color: var(--preto-texto);
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    color: var(--preto-texto);
+    background-color: var(--branco-fundo); 
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/* ---------------------------------------------------- */
+
+/* 4. SEÇÃO DE RESGATES MARCANTE */
+
+.resgates-marcantes {
+    background-color: var(--amarelo-principal);
+    padding: 40px 0 100px 0; 
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.titulo-resgates {
+    color: var(--preto-texto);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.lista-resgates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.botao-resgate {
+    background-color: var(--branco-fundo);
+    color: var(--preto-texto);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.botao-resgate:hover {
+    background-color: #f0f0f0;
+}
