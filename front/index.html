@@ -1,24 +1,63 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Instituto Caramelo - Resgate e Adoção de Cães</title>
-    <meta name="description" content="ONG dedicada ao resgate, cuidado e adoção responsável de cães. Conheça nosso trabalho e ajude a transformar vidas." />
-    <meta name="author" content="Instituto Caramelo" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto Caramelo - Cadastro e Resgates</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
-    <meta property="og:title" content="Instituto Caramelo - Resgate e Adoção de Cães" />
-    <meta property="og:description" content="ONG dedicada ao resgate, cuidado e adoção responsável de cães. Conheça nosso trabalho e ajude a transformar vidas." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <div class="top-bar-wrapper">
+        
+        <header class="cabecalho">
+            <div class="logo">
+                <img src="assets/logo_caramelo.png" alt="Instituto Caramelo 10 anos Logo">
+            </div>
+            <nav class="menu-principal">
+                <ul>
+                    <li><a href="#">Faça uma Doação</a></li>
+                    <li><a href="#">Parceiros</a></li>
+                    <li><a href="#">Adote</a></li>
+                    <li><a href="#">Apadrinhe</a></li>
+                    <li><a href="#">Castração</a></li>
+                    <li><a href="#">Resgates</a></li>
+                    <li><a href="#">Quem somos</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+    <main>
+        <section class="cadastro-ong">
+            <div class="formulario-container">
+                <h2>Cadastre sua ONG</h2>
+                <form>
+                    <input type="text" name="nome" placeholder="Nome:">
+                    <input type="text" name="cidade" placeholder="Cidade:">
+                    <input type="text" name="representante" placeholder="Representante:">
+                    <input type="text" name="idade" placeholder="Idade da ong:">
+                    <textarea name="motivacao" placeholder="Motivação:"></textarea>
+                </form>
+            </div>
+        </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <section class="resgates-marcantes">
+            <h2 class="titulo-resgates">Resgates marcantes</h2>
+            <div class="lista-resgates">
+                <div class="botao-resgate">135 ANIMAIS</div>
+                <div class="botao-resgate">1700 ANIMAIS</div>
+                <div class="botao-resgate">NINHA DE PITBULLS</div>
+                <div class="botao-resgate">CRACOLÂNDIA</div>
+                <div class="botao-resgate">NULA QUEIMADA</div>
+                <div class="botao-resgate">PANTANAL</div>
+                <div class="botao-resgate">CEPETO</div>
+                <div class="botao-resgate">CANIL RIO G. DO SUL</div>
+                <div class="botao-resgate">MULHER DA CASA ABANDONA</div>
+            </div>
+        </section>
+    </main>
+
+</body>
 </html>
