@@ -1,5 +1,5 @@
 """
-ASGI config for instituoCaramelo project.
+ASGI config for instituo_caramelo project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'instituoCaramelo.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'instituto_caramelo.settings')
 
 application = get_asgi_application()

@@ -1,5 +1,5 @@
 """
-WSGI config for instituoCaramelo project.
+WSGI config for instituo_caramelo project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'instituoCaramelo.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'instituto_caramelo.settings')
 
 application = get_wsgi_application()
