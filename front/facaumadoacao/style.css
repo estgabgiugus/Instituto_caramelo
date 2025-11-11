@@ -1,0 +1,161 @@
+:root {
+  --laranja-principal: #FBC638; /* mesmo tom da página inicial */
+  --preto-texto: #333333;
+  --branco-fundo: #FFFFFF;
+  --fonte-principal: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  color: var(--preto-texto);
+  background-color: var(--branco-fundo);
+  line-height: 1.6;
+}
+
+/* TOPO */
+.top-bar-wrapper {
+  width: 100%;
+  background-color: var(--laranja-principal);
+  padding: 10px 0;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+  display: block;
+}
+
+.menu-principal ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu-principal li a {
+  text-decoration: none;
+  color: var(--branco-fundo);
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.menu-principal li a:hover {
+  color: var(--preto-texto);
+}
+
+/* SEÇÃO DE DOAÇÃO */
+.doacao {
+  background-color: var(--branco-fundo);
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.formulario-container {
+  background-color: var(--laranja-principal);
+  width: 600px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-container h2 {
+  color: var(--preto-texto);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.texto-doacao {
+  color: var(--preto-texto);
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 500px;
+}
+
+form {
+  width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--fonte-principal);
+  font-size: 16px;
+  color: var(--preto-texto);
+  background-color: var(--branco-fundo);
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/* Botão principal */
+.botao-doar {
+  background-color: var(--preto-texto);
+  color: var(--branco-fundo);
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+.botao-doar:hover {
+  background-color: #555;
+}
+
+/* Valores sugeridos */
+.valores-sugeridos {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.valor-btn {
+  background-color: var(--branco-fundo);
+  border: 2px solid var(--laranja-principal);
+  color: var(--preto-texto);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.valor-btn:hover {
+  background-color: var(--laranja-principal);
+  color: var(--branco-fundo);
+}
