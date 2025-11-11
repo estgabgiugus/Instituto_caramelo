@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instituto Caramelo - Faça uma Doação</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="top-bar-wrapper">
+    <header class="cabecalho">
+      <div class="logo">
+        <img src="https://via.placeholder.com/150" alt="Instituto Caramelo Logo">
+      </div>
+      <nav class="menu-principal">
+        <ul>
+          <li><a href="#">Faça uma Doação</a></li>
+          <li><a href="#">Parceiros</a></li>
+          <li><a href="#">Adote</a></li>
+          <li><a href="#">Apadrinhe</a></li>
+          <li><a href="#">Castração</a></li>
+          <li><a href="#">Resgates</a></li>
+          <li><a href="#">Quem somos</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+
+  <main>
+    <section class="doacao">
+      <div class="formulario-container">
+        <h2>Faça uma Doação</h2>
+        <p class="texto-doacao">
+          Sua contribuição ajuda a salvar vidas e manter nossos resgates ativos.
+          Escolha a forma de doar abaixo:
+        </p>
+        <form>
+          <input type="text" name="nome" placeholder="Seu Nome:">
+          <input type="email" name="email" placeholder="Seu Email:">
+
+          <div class="valores-sugeridos">
+            <button type="button" class="valor-btn">R$ 20</button>
+            <button type="button" class="valor-btn">R$ 50</button>
+            <button type="button" class="valor-btn">R$ 100</button>
+            <button type="button" class="valor-btn">Outro Valor</button>
+          </div>
+
+          <input type="text" name="valor" placeholder="Digite o valor da doação (R$):">
+
+          <select name="forma-pagamento">
+            <option value="">Selecione a forma de pagamento</option>
+            <option value="pix">PIX</option>
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="boleto">Boleto Bancário</option>
+          </select>
+
+          <textarea name="mensagem" placeholder="Mensagem (opcional):"></textarea>
+
+          <button type="submit" class="botao-doar">Doar Agora</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
