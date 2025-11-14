@@ -1,12 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from cadastro.models import ONG
 
 
-def index(request):
-    return render(request, "index.html")
-
-
 def registrar_ong(request):
+    mensagem = None
+
     if request.method == "POST":
         nome = request.POST.get("nome")
         cidade = request.POST.get("cidade")
@@ -22,10 +20,10 @@ def registrar_ong(request):
             motivacao=motivacao
         )
 
-        return redirect("cadastro_sucesso")
+        mensagem = "Enviado com sucesso! Aguarde contato."
 
-    return redirect("index")
+    return render(request, "index.html", {"mensagem": mensagem})
 
 
-def cadastro_sucesso(request):
-    return render(request, "sucesso.html")
+def index(request):
+    return render(request, "index.html")

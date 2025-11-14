@@ -168,3 +168,20 @@ textarea {
 .botao-resgate:hover {
     background-color: #f0f0f0;
 }
+
+.msg-sucesso {
+    color: green;
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.msg-sucesso {
+    color: #0f7a0f;
+    background: #d9f8d9;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-weight: 600;
+    border: 1px solid #8edf8e;
+}
