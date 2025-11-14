@@ -1,20 +1,24 @@
-# dentro de cadastro/views.py
-
 from django.shortcuts import render, redirect
-from .forms import OngForm
+from .forms import ONG
 
-# Função para a página do formulário
+
+def index(request):
+    return render(request, "index.html")
+
+
 def registrar_ong(request):
-    if request.method == 'POST':
-        form = OngForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('cadastro_sucesso')
-    else:
-        form = OngForm()
-    
-    return render(request, 'cadastro/formulario.html', {'form': form})
+    if request.method == "POST":
+        ONG.objects.create(
+            nome=request.POST.get("nome"),
+            cidade=request.POST.get("cidade"),
+            representante=request.POST.get("representante"),
+            cnpj=request.POST.get("CNPJ"),
+            motivacao=request.POST.get("motivacao"),
+        )
+        return redirect("cadastro_sucesso")
 
-# Função para a página de sucesso
+    return redirect("index")
+
+
 def cadastro_sucesso(request):
-    return render(request, 'cadastro/sucesso.html')
+    return render(request, "sucesso.html")

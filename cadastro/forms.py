@@ -9,10 +9,10 @@ class OngForm(forms.ModelForm):
         model = ONG
         fields = [
             'nome',
+            'cidade',
+            'representante',
             'cnpj',
-            'endereco',
-            'area_atuacao',
-            'contato'
+            'motivacao'
         ]
 
 

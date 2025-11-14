@@ -7,9 +7,5 @@ import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('', include('cadastro.urls')),
-    path('', views.index, name='index')
+    path('', include('front.urls')),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.STATIC_URL, document_root=os.path.join(settings.BASE_DIR, 'front', 'static'))

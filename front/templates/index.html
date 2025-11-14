@@ -31,12 +31,15 @@
         <section class="cadastro-ong">
             <div class="formulario-container">
                 <h2>Cadastre sua ONG</h2>
-                <form>
+                <form method="POST" action= "{% url 'registrar_ong' %}">
+                    {% csrf_token %}
                     <input type="text" name="nome" placeholder="Nome:">
                     <input type="text" name="cidade" placeholder="Cidade:">
                     <input type="text" name="representante" placeholder="Representante:">
                     <input type="text" id = "cnpj" name="CNPJ" placeholder="CNPJ:" maxlength="18">
                     <textarea name="motivacao" placeholder="Motivação:"></textarea>
+
+                    <button type="submit" class="enviar">Enviar</button>
                 </form>
             </div>
         </section>
