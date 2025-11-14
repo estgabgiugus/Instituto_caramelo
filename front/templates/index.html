@@ -35,7 +35,7 @@
                     <input type="text" name="nome" placeholder="Nome:">
                     <input type="text" name="cidade" placeholder="Cidade:">
                     <input type="text" name="representante" placeholder="Representante:">
-                    <input type="text" name="CNPJ" placeholder="CNPJ:">
+                    <input type="text" id = "cnpj" name="CNPJ" placeholder="CNPJ:" maxlength="18">
                     <textarea name="motivacao" placeholder="Motivação:"></textarea>
                 </form>
             </div>
@@ -58,5 +58,28 @@
     </main>
 
 </body>
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const el = document.getElementById('cnpj');
+      if (!el) {
+        console.error('Input #cnpj não encontrado no DOM');
+        return;
+      }
 
+      function formatCNPJ(value) {
+        value = String(value).replace(/\D/g, ''); 
+        value = value.replace(/^(\d{2})(\d)/, '$1.$2');
+        value = value.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3'); 
+        value = value.replace(/\.(\d{3})(\d)/, '.$1/$2'); 
+        value = value.replace(/(\d{4})(\d)/, '$1-$2');
+        return value.slice(0, 18); 
+      }
+
+      el.addEventListener('input', function (e) {
+        const posAntes = el.selectionStart;
+        el.value = formatCNPJ(el.value);
+        el.selectionStart = el.selectionEnd = el.value.length;
+      });
+    });
+  </script>
 </html>
