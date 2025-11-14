@@ -9,3 +9,8 @@ urlpatterns = [
     path('sucesso/', views.cadastro_sucesso, name='cadastro_sucesso'),
     path("ongs/aprovadas/", views.ongs_aprovadas, name="ongs_aprovadas"),
 ]
+
+
+urlpatterns = [
+    path("parceiros/", views.parceiros, name="parceiros"),
+]

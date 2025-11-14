@@ -21,3 +21,14 @@ class ONG(models.Model):
 
     def __str__(self):
         return self.nome
+
+
+class Parceiro(models.Model):
+    nome = models.CharField(max_length=100)
+    descricao = models.TextField()
+    cidade = models.CharField(max_length=100)
+    estado = models.CharField(max_length=2)
+    aprovado = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.nome

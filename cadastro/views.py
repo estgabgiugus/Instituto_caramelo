@@ -1,8 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import ONG
-
-from django.shortcuts import render, redirect
-from .models import ONG
+from .models import Parceiro
 
 
 def registrar_ong(request):
@@ -34,3 +32,8 @@ def ongs_aprovadas(request):
 def ongs_rejeitadas(request):
     rejeitadas = ONG.objects.filter(status="rejeitada")
     return render(request, "ongs_rejeitadas.html", {"ongs": rejeitadas})
+
+
+def parceiros(request):
+    parceiros = Parceiro.objects.filter(aprovado=True)
+    return render(request, "parceiros.html", {"parceiros": parceiros})
