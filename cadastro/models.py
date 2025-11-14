@@ -24,10 +24,12 @@ class ONG(models.Model):
 
 
 class Parceiro(models.Model):
-    nome = models.CharField(max_length=100)
-    descricao = models.TextField()
-    cidade = models.CharField(max_length=100)
-    estado = models.CharField(max_length=2)
+    nome = models.CharField(max_length=255)
+    cidade = models.CharField(max_length=255)
+    representante = models.CharField(max_length=255)
+    cnpj = models.CharField(max_length=18)
+    motivacao = models.TextField()
+
     aprovado = models.BooleanField(default=False)
 
     def __str__(self):

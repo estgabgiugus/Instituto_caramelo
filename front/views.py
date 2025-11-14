@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from cadastro.models import ONG
+from cadastro.models import ONG, Parceiro
 
 
 def registrar_ong(request):
@@ -27,3 +27,8 @@ def registrar_ong(request):
 
 def index(request):
     return render(request, "index.html")
+
+
+def parceiros(request):
+    parceiros = Parceiro.objects.filter(aprovado=True)
+    return render(request, "parceiros.html", {"parceiros": parceiros})
