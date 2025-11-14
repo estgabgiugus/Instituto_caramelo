@@ -3,6 +3,17 @@ from django.contrib.auth.models import User
 
 
 class ONG(models.Model):
+    nome = models.CharField(max_length=200)
+    cidade = models.CharField(max_length=120, blank=True, null=True)
+    representante = models.CharField(max_length=150, blank=True, null=True)
+    cnpj = models.CharField(max_length=18, unique=True)
+    motivacao = models.TextField(blank=True, null=True)
+
+    def __str__(self):
+        return self.nome
+
+
+'''class ONG(models.Model):
     usuarios = models.ManyToManyField(User, blank=True, related_name="ongs")
 
     nome = models.CharField(max_length=200, verbose_name="Nome da ONG")
@@ -64,4 +75,4 @@ class Selo(models.Model):
     ativo = models.BooleanField(default=True)
 
     def __str__(self):
-        return f"Selo para {self.ong.nome} (Válido até: {self.data_validade})"
+        return f"Selo para {self.ong.nome} (Válido até: {self.data_validade})"'''
