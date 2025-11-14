@@ -14,16 +14,12 @@
   <div class="top-bar-wrapper">
     <header class="cabecalho">
       <div class="logo">
+        <!-- Logo fixa no canto superior esquerdo -->
         <img src="https://via.placeholder.com/150" alt="Instituto Caramelo Logo">
       </div>
       <nav class="menu-principal">
         <ul>
-          <li><a href="#">Faça uma Doação</a></li>
           <li><a href="#">Parceiros</a></li>
-          <li><a href="#">Adote</a></li>
-          <li><a href="#">Apadrinhe</a></li>
-          <li><a href="#">Castração</a></li>
-          <li><a href="#">Resgates</a></li>
           <li><a href="#">Quem somos</a></li>
         </ul>
       </nav>
@@ -38,7 +34,7 @@
           Sua contribuição ajuda a salvar vidas e manter nossos resgates ativos.
           Escolha a forma de doar abaixo:
         </p>
-        <form>
+        <form id="formDoacao">
           <input type="text" name="nome" placeholder="Seu Nome:">
           <input type="email" name="email" placeholder="Seu Email:">
 
@@ -62,9 +58,12 @@
 
           <button type="submit" class="botao-doar">Doar Agora</button>
         </form>
+
+        <p id="mensagem-resultado" style="margin-top:20px; font-weight:600;"></p>
       </div>
     </section>
   </main>
 
+  <script src="script.js"></script>
 </body>
 </html>
