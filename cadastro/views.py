@@ -36,4 +36,5 @@ def ongs_rejeitadas(request):
 
 def parceiros(request):
     parceiros = Parceiro.objects.filter(aprovado=True)
+    print(parceiros.count())
     return render(request, "parceiros.html", {"parceiros": parceiros})

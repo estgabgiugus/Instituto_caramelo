@@ -15,8 +15,9 @@
     {% for p in parceiros %}
         <div>
             <h2>{{ p.nome }}</h2>
-            <p>{{ p.cidade }}</p>
-            <p>{{ p.representante }}</p>
+            <p>Cidade: {{ p.cidade }}</p>
+            <p>Representante: {{ p.representante }}</p>
+            <p>ONG: {{ p.ong.nome }}</p>  
         </div>
     {% endfor %}
 {% else %}

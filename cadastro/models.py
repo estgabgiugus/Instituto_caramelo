@@ -29,8 +29,10 @@ class Parceiro(models.Model):
     representante = models.CharField(max_length=255)
     cnpj = models.CharField(max_length=18)
     motivacao = models.TextField()
-
     aprovado = models.BooleanField(default=False)
+
+    ong = models.ForeignKey(ONG, on_delete=models.CASCADE,
+                            related_name='parceiros', null=True, blank=True)
 
     def __str__(self):
         return self.nome

@@ -20,7 +20,7 @@ def registrar_ong(request):
             motivacao=motivacao
         )
 
-        mensagem = "Enviado com sucesso! Aguarde contato."
+        mensagem = "Cadastrado com sucesso! Aguarde o resultado."
 
     return render(request, "index.html", {"mensagem": mensagem})
 
@@ -31,4 +31,8 @@ def index(request):
 
 def parceiros(request):
     parceiros = Parceiro.objects.filter(aprovado=True)
-    return render(request, "parceiros.html", {"parceiros": parceiros})
+    if not parceiros:
+        mensagem = "Nenhum parceiro aprovado no momento."
+    else:
+        mensagem = None
+    return render(request, 'parceiros.html', {'parceiros': parceiros, 'mensagem': mensagem})
