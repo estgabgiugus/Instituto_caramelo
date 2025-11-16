@@ -47,28 +47,59 @@ body {
 
 /* ESTILO PARA O LOGO (IMAGEM) */
 .logo img {
-    height: 90px; /* Define o tamanho da imagem para caber na barra */
+    height: 110px; /* Aumentando o tamanho da imagem */
     width: auto;
     display: block; 
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaço entre os ícones sociais e os botões principais */
 }
 
 .menu-principal ul {
     list-style: none;
     display: flex;
+    gap: 20px; /* Adiciona espaço entre os botões */
 }
 
 /* Ajuste no Menu: Cor BRANCA para contraste na barra amarela */
 .menu-principal li a {
     text-decoration: none;
-    color: var(--branco-fundo); /* Links BRANCOS */
-    padding: 0 15px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: color 0.3s;
+    background-color: var(--branco-fundo); /* Fundo branco para formato de botão */
+    color: #5D4037; /* Texto em tom de marrom */
+    padding: 12px 28px; /* Aumenta o tamanho do botão */
+    border-radius: 30px; /* Deixa os botões bem arredondados */
+    font-family: var(--fonte-principal); /* Garante que a fonte correta seja usada */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    font-weight: 700; /* Deixa o texto em negrito */
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    min-width: 180px; /* Garante uma largura mínima para todos os botões */
+    text-align: center; /* Centraliza o texto dentro do botão */
 }
 
 .menu-principal li a:hover {
-    color: var(--preto-texto); 
+    background-color: #f2f2f2; /* Leve escurecida no hover */
+    transform: translateY(-2px); /* Efeito de levantar ao passar o mouse */
+}
+
+/* Estilo para os ícones de redes sociais */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons img {
+    height: 35px; /* Tamanho dos ícones */
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1); /* Efeito de crescimento ao passar o mouse */
 }
 
 /* ---------------------------------------------------- */
@@ -95,8 +126,8 @@ body {
 
 .formulario-container h2 {
     color: var(--preto-texto);
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 40px; /* Aumentando mais o tamanho da fonte */
+    font-weight: 900; /* Deixando a fonte ainda mais pesada (negrito máximo) */
     margin-bottom: 30px;
     text-align: center;
 }
@@ -121,6 +152,29 @@ textarea {
     resize: none;
     height: 100px;
 }
+
+/* Estilo para o botão de Enviar do formulário */
+.enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--branco-fundo); /* Fundo branco */
+    color: var(--preto-texto); /* Texto preto */
+    border: none;
+    border-radius: 30px; /* Deixa o botão bem arredondado */
+    font-family: var(--fonte-principal);
+    font-size: 18px; /* Aumenta o tamanho da fonte */
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.enviar:hover {
+    background-color: #e0e0e0; /* Cinza mais escuro para o hover */
+    transform: scale(1.02); /* Efeito de leve crescimento */
+}
+
 
 /* ---------------------------------------------------- */
 
@@ -160,6 +214,7 @@ textarea {
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
+    text-decoration: none; /* Remove o sublinhado do link */
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s;
@@ -198,13 +253,72 @@ textarea {
 }
 
 /* Estilo para o banner "Sobre" na página inicial */
-.sobre-banner {
-    width: 100%;
-    padding: 60px 0; /* Espaçamento vertical para separar das outras seções */
+.sobre-instituto {
+    padding: 80px 50px;
+    background-color: #fdfdfd;
 }
 
-.sobre-banner img {
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sobre-texto {
+    flex: 1; /* Ocupa 1/2 do espaço */
+}
+
+.sobre-texto h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #5D4037; /* Tom de marrom */
+    margin-bottom: 20px;
+}
+
+.sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.sobre-imagem {
+    flex: 1.2; /* Aumentando a proporção de espaço para a imagem */
+    text-align: center;
+}
+.sobre-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px; /* Adicionando bordas arredondadas */
+}
+
+/* Estilo para o banner "Antes e Depois" na página inicial */
+.antesdepois-banner {
+    width: 100%;
+    padding: 60px 0; /* Espaçamento vertical */
+}
+
+.antesdepois-banner img {
     width: 100%;
     height: auto;
-    display: block; /* Remove espaço extra abaixo da imagem */
+    display: block;
+}
+
+/* Estilo para o link "Voltar para início" */
+.voltar-topo-container {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.voltar-topo-container a {
+    color: #5D4037; /* Tom de marrom */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: text-decoration 0.3s;
+}
+
+.voltar-topo-container a:hover {
+    text-decoration: underline;
 }

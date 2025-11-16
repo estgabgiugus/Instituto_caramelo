@@ -20,6 +20,14 @@
                 <a href="{% url 'index' %}"><img src="{% static 'logo_caramelo.png' %}" alt="Instituto Caramelo 10 anos Logo"></a>
             </div>
             <nav class="menu-principal">
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'ig_logo.png' %}" alt="Instagram">
+                    </a>
+                    <a href="https://www.facebook.com/InstitutoCaramelo/?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+                        <img src="{% static 'facebook_logo.png' %}" alt="Facebook">
+                    </a>
+                </div>
                 <ul>
                     <li><a href="{% url 'parceiros' %}">Parceiros</a></li>
                     <li><a href="{% url 'quem_somos' %}">Quem somos</a></li>
@@ -29,8 +37,17 @@
     </div>
 
     <main>
-        <section class="sobre-banner">
-            <img src="{% static 'sobre_logo.png' %}" alt="Banner sobre o Instituto Caramelo">
+        <section class="sobre-instituto">
+            <div class="sobre-container">
+                <div class="sobre-texto">
+                    <h2>O Instituto Caramelo</h2>
+                    <p>Fundado em fevereiro de 2015, a partir da união de um grupo de pessoas em prol do propósito de cuidar bem e adotar bem cada animal, o Instituto Caramelo atua principalmente no resgate de animais feridos ou em situação de risco, recuperação e adoção. Mantemos um abrigo com cerca de 300 animais, entre cães e gatos, todos resgatados das ruas, onde eles são protegidos, tratados, alimentados e aguardam pela chance de serem adotados.</p>
+                    <p>O Instituto Caramelo fica em Ribeirão Pires, na região metropolitana, em um terreno de 27.000 metros quadrados. Há centro cirúrgico com atendimento veterinário 24 horas, núcleo de fisioterapia, adestramento para tratamento psicológico, 5 áreas de soltura, 35 canis, 4 gatis e uma equipe de mais de 40 profissionais que se doam por completo para que o abrigo seja apenas uma fase de passagem na vida dos bichos. São necessários cerca de 300 mil reais por mês para sustentá-lo e são as doações, parcerias e vendas na loja que tornam esse sonho possível.</p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="{% static 'caramelo_logo.png' %}" alt="Logo Instituto Caramelo">
+                </div>
+            </div>
         </section>
 
         <section class="cadastro-ong">
@@ -52,21 +69,29 @@
             </div>
         </section>
 
+        <section class="antesdepois-banner">
+            <img src="{% static 'antesedepois_logo.png' %}" alt="Banner Antes e Depois">
+        </section>
+
         <section class="resgates-marcantes">
             <h2 class="titulo-resgates">Resgates marcantes</h2>
             <div class="lista-resgates">
-                <div class="botao-resgate">135 ANIMAIS</div>
-                <div class="botao-resgate">1700 ANIMAIS</div>
-                <div class="botao-resgate">NINHA DE PITBULLS</div>
-                <div class="botao-resgate">CRACOLÂNDIA</div>
-                <div class="botao-resgate">NULA QUEIMADA</div>
-                <div class="botao-resgate">PANTANAL</div>
-                <div class="botao-resgate">CEPETO</div>
-                <div class="botao-resgate">CANIL RIO G. DO SUL</div>
-                <div class="botao-resgate">MULHER DA CASA ABANDONA</div>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">135 ANIMAIS</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">1700 ANIMAIS</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">NINHA DE PITBULLS</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">CRACOLÂNDIA</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">MULA QUEIMADA</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">PANTANAL</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">CEPETO</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">CANIL RIO G. DO SUL</a>
+                <a href="https://www.instagram.com/instituto.caramelo/" target="_blank" rel="noopener noreferrer" class="botao-resgate">MULHER DA CASA ABANDONA</a>
             </div>
         </section>
     </main>
+
+    <div class="voltar-topo-container">
+        <a href="#">Voltar para início</a>
+    </div>
 
 </body>
  <script>
