@@ -1,28 +1,86 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parceiros</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nossos Parceiros</title>
+  <!-- Link para o CSS geral do site -->
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <!-- Link para o CSS específico da página de Parceiros -->
+  <link rel="stylesheet" href="{% static 'parceiros.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<h1>Parceiros</h1>
-
-{% if parceiros %}
-    {% for p in parceiros %}
-        <div>
-            <h2>{{ p.nome }}</h2>
-            <p>Cidade: {{ p.cidade }}</p>
-            <p>Representante: {{ p.representante }}</p>
-            <p>ONG: {{ p.ong.nome }}</p>  
+  <!-- Cabeçalho de Navegação Principal do Site -->
+  <div class="top-bar-wrapper">
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'logo_caramelo.png' %}" alt="Instituto Caramelo 10 anos Logo"></a>
         </div>
-    {% endfor %}
-{% else %}
-    <p>Nenhuma ONG aprovada ainda.</p>
-{% endif %}
+        <div class="header-page-title-main">
+            <h1>Nossos Parceiros</h1>
+        </div>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="{% url 'index' %}">Início</a></li>
+                <li><a href="{% url 'quem_somos' %}">Quem somos</a></li>
+            </ul>
+        </nav>
+    </header>
+  </div>
 
+  <main>
+    <section class="partners-section">
+      <div class="sponsors-header-image">
+        <img src="{% static 'patrocinadores_logo.png' %}" alt="Logo dos Patrocinadores">
+        <p>Essas marcas acreditam na nossa causa e são fundamentais para manter o <strong>Instituto Caramelo</strong> funcionando todos os dias. Graças às doações delas, <strong>oferecemos estrutura de qualidade</strong> e <strong>todo o cuidado</strong> que nossos resgatados precisam para recomeçar.</p>
+      </div>
+      <div class="partners-grid">
+        <a href="https://www.petlove.com.br/" target="_blank" rel="noopener noreferrer" class="partner-card">
+          <img src="{% static 'petlove_logo.png' %}" alt="Logo Petlove">
+          <h3>Pet Love</h3>
+          <p>Referência no mercado pet, a Petlove tem como missão democratizar e simplificar os cuidados com os animais, oferecendo a melhor experiência para tutores e profissionais do segmento.</p>
+        </a>
+        <a href="https://www.viacaocometa.com.br/" target="_blank" rel="noopener noreferrer" class="partner-card">
+          <img src="{% static 'cometa_logo.png' %}" alt="Logo Cometa">
+          <h3>Cometa</h3>
+          <p>Com décadas de história no transporte rodoviário, a Viação Cometa conecta pessoas e destinos com segurança e qualidade.</p>
+        </a>
+        <a href="https://evoraseguros.com.br/" target="_blank" rel="noopener noreferrer" class="partner-card">
+          <img src="{% static 'evora_logo.png' %}" alt="Logo Évora">
+          <h3>Évora</h3>
+          <p>A Évora é uma corretora de seguros brasileira consolidada como uma das maiores no segmento automotivo.</p>
+        </a>
+        <a href="https://fictor.com.br/" target="_blank" rel="noopener noreferrer" class="partner-card">
+          <img src="{% static 'fictor_logo.png' %}" alt="Logo Fictor">
+          <h3>Fictor</h3>
+          <p>Especializada em gestão empresarial e investimentos estratégicos, a Fictor impulsiona negócios com inovação e inteligência.</p>
+        </a>
+        <a href="https://www.petlove.com.br/marcas/nutrilus-pro" target="_blank" rel="noopener noreferrer" class="partner-card">
+          <img src="{% static 'nutrilus_logo.png' %}" alt="Logo Nutrilus">
+          <h3>Nitrulus</h3>
+          <p>Especialistas em desenvolvimento de alimentação premium especial para cães e gatos, formulada por médicos veterinários e feita com ingredientes de alta qualidade.</p>
+        </a>
+        <a href="https://www.sanoldog.com.br/" target="_blank" rel="noopener noreferrer" class="partner-card">
+          <img src="{% static 'sanoldog_logo.png' %}" alt="Logo Sanol Dog">
+          <h3>Sanal Dog</h3>
+          <p>Referência em higiene e limpeza, a Sanol desenvolve soluções seguras e eficazes para desinfetar e perfumar ambientes, garantindo proteção e bem-estar para animais e pessoas.</p>
+        </a>
+        <a href="https://www.zoetis.com/" target="_blank" rel="noopener noreferrer" class="partner-card">
+          <img src="{% static 'zoetis_logo.png' %}" alt="Logo Zoetis">
+          <h3>Zoeti</h3>
+          <p>Líder mundial em saúde animal, a Zoetis desenvolve vacinas, medicamentos e soluções inovadoras há mais de 65 anos.</p>
+        </a>
+      </div>
+    </section>
+    <div class="partners-banner">
+      <img src="{% static 'fotoparaparceiros_logo.png' %}" alt="Banner para novos parceiros">
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; Instituto Caramelo. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>

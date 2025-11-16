@@ -36,3 +36,9 @@ def parceiros(request):
     else:
         mensagem = None
     return render(request, 'parceiros.html', {'parceiros': parceiros, 'mensagem': mensagem})
+
+def quem_somos(request):
+    """
+    Renderiza a página 'Quem Somos'.
+    """
+    return render(request, 'quemsomos_index.html')

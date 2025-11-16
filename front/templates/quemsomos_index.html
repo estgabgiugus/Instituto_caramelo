@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quem Somos</title>
+  <!-- Link para o CSS geral do site (para o cabeçalho de navegação) -->
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <!-- Link para o CSS específico da página "Quem Somos" -->
+  <link rel="stylesheet" href="{% static 'quemsomos.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabeçalho de Navegação Principal do Site -->
+  <div class="top-bar-wrapper">
+    <header class="cabecalho">
+        <div class="logo">
+            <a href="{% url 'index' %}"><img src="{% static 'logo_caramelo.png' %}" alt="Instituto Caramelo 10 anos Logo"></a>
+        </div>
+        <div class="header-page-title-main">
+            <h1>Quem Somos</h1>
+        </div>
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="{% url 'parceiros' %}">Parceiros</a></li>
+                <li><a href="{% url 'index' %}">Início</a></li>
+            </ul>
+        </nav>
+    </header>
+  </div>
+ 
+  <section class="team">
+    <h2>Equipe</h2>
+    <div class="grid">
+ 
+      <div class="card">
+        <img src="{% static 'Amanda.jpg.webp' %}" alt="Amanda" />
+        <h3>Amanda</h3>
+        <p>Enfermeira</p>
+      </div>
+ 
+      <div class="card">
+        <img src="{% static 'Ana_Mariano_-_produt.jpg.webp' %}" alt="Ana Mariano" />
+        <h3>Ana Mariano</h3>
+        <p>Coordenadora de Comunicação</p>
+      </div>
+ 
+      <div class="card">
+        <img src="{% static 'Bruna_Hernandez.jpg.webp' %}" alt="Bruna Hernandez" />
+        <h3>Bruna Hernandez</h3>
+        <p>Tratadora da Internação</p>
+      </div>
+ 
+      <div class="card">
+        <img src="{% static 'Dlete_Cardoso_Trat.jpg' %}" alt="Dalete Cardoso" />
+        <h3>Dalete Cardoso</h3>
+        <p>Motorista</p>
+      </div>
+ 
+      <div class="card">
+        <img src="{% static 'Edu.jpg.webp' %}" alt="Edu" />
+        <h3>Edu</h3>
+        <p>Motorista</p>
+      </div>
+ 
+      <div class="card">
+        <img src="{% static 'Giovanna_Caputo.jpg.webp' %}" alt="Giovanna Caputo" />
+        <h3>Giovanna Caputo</h3>
+        <p>Médica Veterinária</p>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <section class="mission">
+    <h2>Nossa Essência</h2>
+    <p>
+      <strong>Somos movidos por propósito</strong>. Cada linha de código, cada imagem, cada texto é pensado para criar conexões reais. <strong>Acreditamos que tecnologia e humanidade caminham juntas</strong> — e é isso que nos guia. Aqui, cada membro da equipe é uma peça essencial na construção de algo maior: um espaço digital que <strong>acolhe, inspira e transforma</strong>.
+    </p>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; Instituto Caramelo. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>

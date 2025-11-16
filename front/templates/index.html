@@ -17,18 +17,22 @@
 
         <header class="cabecalho">
             <div class="logo">
-                <img src="{% static 'logo_caramelo.png' %}" alt="Instituto Caramelo 10 anos Logo">
+                <a href="{% url 'index' %}"><img src="{% static 'logo_caramelo.png' %}" alt="Instituto Caramelo 10 anos Logo"></a>
             </div>
             <nav class="menu-principal">
                 <ul>
                     <li><a href="{% url 'parceiros' %}">Parceiros</a></li>
-                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="{% url 'quem_somos' %}">Quem somos</a></li>
                 </ul>
             </nav>
         </header>
     </div>
 
     <main>
+        <section class="sobre-banner">
+            <img src="{% static 'sobre_logo.png' %}" alt="Banner sobre o Instituto Caramelo">
+        </section>
+
         <section class="cadastro-ong">
             <div class="formulario-container">
                 <h2>Cadastre sua ONG</h2>

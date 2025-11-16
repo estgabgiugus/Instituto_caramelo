@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.partners-section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.partners-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.partners-grid {
+    display: grid; /* Usamos grid para um alinhamento preciso em colunas */
+    grid-template-columns: repeat(3, 1fr); /* Define uma grade fixa de 3 colunas */
+    gap: 2rem;
+}
+
+.partner-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: center;
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: flex-start; /* Alinha os itens ao topo */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: inherit; /* Faz o texto herdar a cor do elemento pai */
+}
+
+.partner-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.partner-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain; /* 'contain' é melhor para logos para não cortar */
+    margin-bottom: 1.5rem;
+}
+
+/* Regra específica para posicionar o card da Zoetis */
+.partner-card:nth-child(7) {
+    grid-column-start: 2; /* Posiciona o 7º item para começar na 2ª coluna */
+}
+
+.partner-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.partner-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.no-partners-message {
+    padding: 4rem 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    background-color: #fff;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 3rem;
+}
+
+/* Estilo para a imagem de título dos patrocinadores */
+.sponsors-header-image {
+    text-align: center;
+    margin-bottom: 3rem; /* Espaço entre a imagem e os cards */
+}
+
+.sponsors-header-image img {
+    max-width: 500px; /* Define um tamanho máximo para a imagem */
+    width: 100%;
+}
+
+/* Estilo para a legenda dos patrocinadores */
+.sponsors-header-image p {
+    max-width: 800px;
+    margin: 1.5rem auto 0 auto;
+    color: #5D4037; /* Tom de marrom escuro */
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Estilo para o banner abaixo dos parceiros */
+.partners-banner {
+    margin-top: 4rem; /* Espaço entre os cards e o banner */
+}
+
+.partners-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

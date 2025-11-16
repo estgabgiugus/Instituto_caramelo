@@ -185,3 +185,26 @@ textarea {
     font-weight: 600;
     border: 1px solid #8edf8e;
 }
+
+/* Estilo para o título no cabeçalho principal */
+.header-page-title-main {
+    text-align: center;
+}
+
+.header-page-title-main h1 {
+    color: var(--branco-fundo); /* Cor branca para combinar com o menu */
+    font-size: 1.5rem; /* Tamanho da fonte ajustado */
+    margin: 0; /* Remove margens */
+}
+
+/* Estilo para o banner "Sobre" na página inicial */
+.sobre-banner {
+    width: 100%;
+    padding: 60px 0; /* Espaçamento vertical para separar das outras seções */
+}
+
+.sobre-banner img {
+    width: 100%;
+    height: auto;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}

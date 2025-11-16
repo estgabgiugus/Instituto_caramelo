@@ -1,0 +1,121 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  color: #5D4037; /* Tom de marrom escuro para o texto principal */
+  line-height: 1.6;
+}
+
+.header {
+  background-color: #f9c74f;
+  padding: 0.5rem 1rem; /* Espaçamento para controlar a altura final */
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+  display: flex; /* Ativa o Flexbox */
+  flex-direction: column; /* Organiza os itens em coluna (título e parágrafo) */
+  justify-content: center; /* Centraliza verticalmente */
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.4rem; /* Reduzindo ainda mais o título */
+}
+
+.header p {
+  font-size: 0.75rem; /* Reduzindo ainda mais o parágrafo */
+  margin-top: 0; /* Removendo o espaço superior */
+}
+
+.team {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.team h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #5D4037; /* Tom de marrom escuro */
+  font-weight: bold; /* Deixa o título em negrito */
+}
+
+/* ======= GRID FIXO 3 EM CIMA + 3 EM BAIXO ======= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem; /* Aumentando mais o espaço entre os cards */
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding: 2.5rem; /* Aumentando drasticamente o espaçamento interno */
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.8s ease-in;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 180px; /* Aumentando drasticamente a largura da imagem */
+  height: 180px; /* Aumentando drasticamente a altura da imagem */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  border-radius: 8px; /* Cantos suavemente arredondados */
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  margin: 0.5rem 0 0.2rem;
+  color: #5D4037; /* Tom de marrom escuro */
+  font-size: 1.4rem; /* Aumentando drasticamente o tamanho do nome */
+}
+
+.card p {
+  color: #5D4037; /* Tom de marrom escuro */
+  font-size: 1.1rem; /* Aumentando drasticamente o tamanho da função */
+}
+
+.mission {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in;
+}
+
+.mission h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #5D4037; /* Tom de marrom escuro */
+  font-weight: bold; /* Deixa o título em negrito */
+}
+
+.mission p {
+  font-size: 1.1rem;
+  color: #5D4037; /* Tom de marrom escuro */
+}
+
+.footer {
+  background-color: #eee;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
