@@ -68,7 +68,8 @@ body {
 
 .formulario-container {
   background-color: var(--laranja-principal);
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   padding: 40px;
   display: flex;
   flex-direction: column;
@@ -158,4 +159,21 @@ textarea {
 .valor-btn:hover {
   background-color: var(--laranja-principal);
   color: var(--branco-fundo);
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 900px) {
+  .cabecalho { padding: 0 20px; }
+  .logo img { height: 70px; }
+  .formulario-container { padding: 30px; }
+}
+
+@media (max-width: 600px) {
+  .cabecalho { flex-direction: column; gap: 8px; align-items: center; padding: 10px 12px; }
+  .logo img { height: 60px; }
+  .formulario-container { max-width: 420px; padding: 20px; margin: 18px; box-shadow: 0 6px 12px rgba(0,0,0,0.08); }
+  form { width: 100%; }
+  .formulario-container h2 { font-size: 20px; margin-bottom: 14px; }
+  input[type="text"], input[type="email"], textarea, select { padding: 12px; font-size: 14px; }
+  .botao-doar { padding: 12px; font-size: 15px; }
 }
